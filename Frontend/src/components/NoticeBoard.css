@@ -1,0 +1,17 @@
+/* NoticeBoard.css */
+.notice-board {
+    border: 5px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .notice-board h2 {
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }  
+  
+ 
+  
