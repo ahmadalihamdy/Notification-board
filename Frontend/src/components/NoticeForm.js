@@ -6,6 +6,7 @@ import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import './NoticeForm.css'; // Import the CSS file
+import Navigation from './Navigation'
 
 const NoticeForm = ({ addNotice }) => {
   const [newNotice, setNewNotice] = useState('');
@@ -27,8 +28,9 @@ const NoticeForm = ({ addNotice }) => {
   };
 
   return (
+   <><Navigation/>
     <div className="notice-form">
-      <img src="" alt="Cosmopolitan University Abuja Logo" className="logo" />
+      <img src="./Assets/cosmopolitan.png" alt="Cosmopolitan University Abuja Logo" className="logo" />
       <h1>COSMOPOLITAN UNIVERSITY ABUJA</h1>
       <h2>Add Notice</h2>
       <Form onSubmit={handleSubmit}>
@@ -55,6 +57,7 @@ const NoticeForm = ({ addNotice }) => {
         </Button>
       </Form>
     </div>
+   </>
   );
 };
 

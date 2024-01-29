@@ -1,16 +1,17 @@
 // src/components/Navigation.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navigation.css';
 
 const Navigation = () => {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/WelcomePage">Home</Link>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/NoticeForm">Dashboard</Link>
         </li>
         <li>
           <Link to="/users">Users</Link>
@@ -20,7 +21,9 @@ const Navigation = () => {
         </li>
       </ul>
     </nav>
+    
   );
+
 };
 
 export default Navigation;
