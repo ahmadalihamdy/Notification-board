@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
+import Navigation from './Navigation'
 
 const LogoutPage = () => {
   const handleLogout = async () => {
@@ -26,6 +27,7 @@ const LogoutPage = () => {
   };
 
   return (
+   <><Navigation/>
     <div>
       <Typography variant="h2">Logout Page</Typography>
       <Button variant="contained" color="primary" onClick={handleLogout}>
@@ -33,6 +35,7 @@ const LogoutPage = () => {
       </Button>
       <Typography variant="body1">You have been successfully logged out.</Typography>
     </div>
+   </>
   );
 };
 

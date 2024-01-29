@@ -1,11 +1,11 @@
 import React from 'react';
-import WelcomePage from './components/WelcomePage';
-import LoginSignup from './components/LoginSignup/Login';
 import NoticeBoard from './components/Noticeboard';
+import LoginSignup from './components/LoginSignup/Login';
 import NoticeForm from './components/NoticeForm';
-import Navigation from './components/Navigation';
 import Users from './components/Users';
 import Logout from './components/Logout';
+import WelcomePage from './components/WelcomePage';
+
 import './App.css';
 import { BrowserRouter, Route,  Routes } from 'react-router-dom';
 // import axios from 'axios';
@@ -25,11 +25,10 @@ const App = () => {
    
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Navigation />}/>
+        <Route exact path='/' element={<NoticeBoard />}/>
         <Route exact path='/WelcomePage' element={<WelcomePage />}/>
         <Route exact path='/login' element={<LoginSignup />}/> 
         <Route exact path='/NoticeForm' element={<NoticeForm />}/>
-        <Route exact path='/NoticeBoard' element={<NoticeBoard />}/> 
         <Route exact path='/Users' element={<Users />}/>
         <Route exact path='/logout' element={<Logout />}/>
       </Routes>

@@ -97,6 +97,7 @@ const UserPage = () => {
   };
 
   return (
+   <><Navigation/>
     <div>
       <h1>User Page</h1>
       <Button variant="contained" color="primary" onClick={() => handleOpen({})}>
@@ -177,6 +178,7 @@ const UserPage = () => {
         </DialogActions>
       </Dialog>
     </div>
+   </>
   );
 };
 
