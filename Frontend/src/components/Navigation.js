@@ -7,8 +7,11 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
+      <li>
+          <Link to="#">Cosmopolitan University</Link>
+        </li>
         <li>
-          <Link to="/WelcomePage">Home</Link>
+          <Link to="/NoticeBoard">Home</Link>
         </li>
         <li>
           <Link to="/NoticeForm">Dashboard</Link>

@@ -13,11 +13,6 @@ import { BrowserRouter, Route,  Routes } from 'react-router-dom';
 
 
 const App = () => {
-  // const [notices, setNotices] = useState([]);
-
-  // const addNotice = (notice) => {
-  //   setNotices([...notices, notice]);
-  // };
 // const mongoClient = new MongoClient(
   
 // )
