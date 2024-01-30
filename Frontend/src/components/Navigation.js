@@ -8,7 +8,7 @@ const Navigation = () => {
     <nav>
       <ul>
       <li>
-          <Link to="#">Cosmopolitan University</Link>
+          <Link to="/WelcomePage">Cosmopolitan University</Link>
         </li>
         <li>
           <Link to="/NoticeBoard">Home</Link>

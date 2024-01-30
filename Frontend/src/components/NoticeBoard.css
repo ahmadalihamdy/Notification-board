@@ -1,4 +1,4 @@
-/* NoticeBoard.css */
+
 .notice-board {
     border: 5px solid #ddd;
     text-align: center;
@@ -8,6 +8,7 @@
   
   .notice-board h2 {
     margin-bottom: 10px;
+    text-align: center;
   }
   h2 {
     margin-bottom: 20px;

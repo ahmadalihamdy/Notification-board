@@ -28,7 +28,9 @@ const LogoutPage = () => {
 
   return (
    <><Navigation/>
-    <div>
+    <div className="notice-form">
+      <img src="./Assets/cosmopolitan.png" alt="Cosmopolitan University Abuja Logo" className="logo" />
+      <h1>COSMOPOLITAN UNIVERSITY ABUJA</h1>
       <Typography variant="h2">Logout Page</Typography>
       <Button variant="contained" color="primary" onClick={handleLogout}>
         Logout

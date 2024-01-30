@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NoticeBoard from './components/Noticeboard';
 import LoginSignup from './components/LoginSignup/Login';
 import NoticeForm from './components/NoticeForm';
@@ -8,22 +8,27 @@ import WelcomePage from './components/WelcomePage';
 
 import './App.css';
 import { BrowserRouter, Route,  Routes } from 'react-router-dom';
-// import axios from 'axios';
-// import { MongoClient } from 'mongo';
-
 
 const App = () => {
-// const mongoClient = new MongoClient(
-  
-// )
+  const [ notices, setNotices] = useState([]);
+  const handleAddNotice = (newNotice) => {
+    setNotices((prevNotices) => [...prevNotices, newNotice]);
+  };
   return (
-   
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<NoticeBoard />}/>
+      <Route
+        exact
+        path='/'
+        element={<NoticeBoard notices={notices} />}
+      />
         <Route exact path='/WelcomePage' element={<WelcomePage />}/>
         <Route exact path='/login' element={<LoginSignup />}/> 
-        <Route exact path='/NoticeForm' element={<NoticeForm />}/>
+        <Route
+          exact
+          path='/NoticeForm'
+          element={<NoticeForm onAddNotice={handleAddNotice} />}
+        />
         <Route exact path='/Users' element={<Users />}/>
         <Route exact path='/logout' element={<Logout />}/>
       </Routes>
