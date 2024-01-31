@@ -5,10 +5,11 @@ import NoticeForm from './components/NoticeForm';
 import Users from './components/Users';
 import Logout from './components/Logout';
 import WelcomePage from './components/WelcomePage';
-
+import { PrismaClient } from '@prisma/client'
 import './App.css';
 import { BrowserRouter, Route,  Routes } from 'react-router-dom';
 
+const prisma = new PrismaClient()
 const App = () => {
   const [ notices, setNotices] = useState([]);
   const handleAddNotice = (newNotice) => {
