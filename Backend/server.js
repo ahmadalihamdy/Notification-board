@@ -106,3 +106,17 @@ app.post('/api/logout', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+app.post('/api/addNotice', (req, res) => {
+  const { text, image, video } = req.body;
+
+  const insertQuery = 'INSERT INTO notices (text, image, video) VALUES (?, ?, ?)';
+  db.query(insertQuery, [text, image, video], (err, result) => {
+    if (err) {
+      console.error('Error inserting notice:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      console.log('Notice added successfully');
+      res.status(200).json({ success: true });
+    }
+  });
+});

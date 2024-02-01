@@ -15,3 +15,12 @@ model User {
   username String
   password String
 }
+model login {
+  id       Int      @id @default(autoincrement())
+  username String
+  password String
+}
+model NoticeBoard {
+  id       Int      @id @default(autoincrement())
+  Image
+}
